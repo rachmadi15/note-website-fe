@@ -1,0 +1,14 @@
+<div class="container mt-5">
+        <div class="mb-3">
+            <label for="title" class="form-label">Judul Catatan</label>
+            <input #title type="text" class="form-control" id="title">
+        </div>
+        <div class="mb-3">
+            <label for="editor" class="form-label">Konten Catatan</label>
+            <quill-editor [formControl]="control" class="content-editor" [placeholder]="''" [styles]="{'min-height': '120px'}"></quill-editor>
+        </div>
+        <button type="submit" class="btn btn-primary mt-5" (click)="onSubmit(title.value)">Submit</button>
+</div>
+
+
+
